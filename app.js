@@ -22,6 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => {
   res.render('index');
 });
+
 app.get('/beer', (req, res) => {
   punkAPI
   .getBeers()
@@ -32,7 +33,8 @@ app.get('/beer', (req, res) => {
     res.render('beer', beersObj )
   })
   .catch(error => console.log(error));
-})
+});
+
 app.get('/randombeer', (req, res) => {
   punkAPI
   .getRandom()
@@ -43,7 +45,17 @@ app.get('/randombeer', (req, res) => {
     res.render('random-beer', randomObj);
   })
   .catch(error => console.log(error));
-})
+});
 
+app.get('/beer/:id', (req, res ) => {
+  let beerId = req.params.id;
+  punkAPI
+  .getBeer(beerId)
+  .then(beerSelected => {
+    console.log(beerSelected)
+    res.render('partials/beerpartials', beerSelected[0])
+  })
+});
+ 
 
 app.listen(3000, () => console.log('🏃‍ on port 3000'));

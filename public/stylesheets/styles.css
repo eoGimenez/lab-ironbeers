@@ -7,7 +7,9 @@ font-family: Arial, Helvetica, sans-serif;
 */
 
 body {
-    
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 nav {
     background-color: #2081c3;
@@ -18,4 +20,9 @@ nav {
     color: white;
     text-decoration: none;
     margin: 0 15px;
+}
+footer {
+    color: #f7f9f9;
+    background-color: #0a2c42;
+    padding: 5px 10px;
 }
