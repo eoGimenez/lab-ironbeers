@@ -5,3 +5,17 @@ dark-blue: #0a2c42;
 grey: #bfbfbf;
 font-family: Arial, Helvetica, sans-serif;
 */
+
+body {
+    
+}
+nav {
+    background-color: #2081c3;
+    padding: 20px;
+    margin: 0 0 10px 0;
+}
+.anchorNav {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
